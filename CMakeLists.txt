@@ -33,6 +33,7 @@ elseif(APPLE)
 endif()
 
 find_package(QT NAMES Qt6 COMPONENTS REQUIRED Core Quick Multimedia Positioning Sensors WebSockets)
+message(STATUS "Using Qt version: ${Qt6Core_VERSION}")
 if (Qt6Core_VERSION VERSION_LESS 6.5.6)
   message(FATAL_ERROR "This version of the ArcGIS Maps SDK for Qt requires at least Qt 6.5.6")
 endif()
