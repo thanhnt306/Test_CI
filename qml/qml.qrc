@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/qml">
+        <file>main.qml</file>
+        <file>Test_CIForm.qml</file>
+    </qresource>
+</RCC>

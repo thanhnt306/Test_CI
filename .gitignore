@@ -1,0 +1,27 @@
+# Ignore build files
+build/
+*.o
+*.obj
+*.so
+*.dll
+*.a
+*.lib
+*.exp
+*.pdb
+*.ncb
+*.sdf
+*.idb
+
+# Ignore Qt Creator files
+*.pro.user
+*.pro.user.*
+*.qmake.stash
+
+# Ignore CMake build folders
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Ignore logs
+*.log
