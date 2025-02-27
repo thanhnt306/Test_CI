@@ -32,7 +32,7 @@ elseif(APPLE)
   set(CMAKE_OSX_DEPLOYMENT_TARGET "13.0" CACHE STRING "Minimum macOS deployment version" FORCE)
 endif()
 
-find_package(Qt6 COMPONENTS REQUIRED Core Quick Multimedia Positioning Sensors WebSockets)
+find_package(QT NAMES Qt6 COMPONENTS REQUIRED Core Quick Multimedia Positioning Sensors WebSockets)
 if (Qt6Core_VERSION VERSION_LESS 6.5.6)
   message(FATAL_ERROR "This version of the ArcGIS Maps SDK for Qt requires at least Qt 6.5.6")
 endif()
