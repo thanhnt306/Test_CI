@@ -31,6 +31,12 @@ if(IOS)
 elseif(APPLE)
   set(CMAKE_OSX_DEPLOYMENT_TARGET "13.0" CACHE STRING "Minimum macOS deployment version" FORCE)
 endif()
+set(CMAKE_PREFIX_PATH "D:/a/Test_CI/Qt/6.6.3/msvc2019_64")
+
+get_cmake_property(_variableNames VARIABLES)
+foreach (_variableName ${_variableNames})
+    message(STATUS "${_variableName}=${${_variableName}}")
+endforeach()
 
 find_package(QT NAMES Qt6 COMPONENTS REQUIRED Core Quick Multimedia Positioning Sensors WebSockets)
 message(STATUS "Using Qt version: ${Qt6_VERSION}")
