@@ -10,7 +10,7 @@
 #
 #  See the Sample code usage restrictions document for further information.
 #-------------------------------------------------
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 project(Test_CI LANGUAGES CXX)
 
@@ -31,14 +31,10 @@ if(IOS)
 elseif(APPLE)
   set(CMAKE_OSX_DEPLOYMENT_TARGET "13.0" CACHE STRING "Minimum macOS deployment version" FORCE)
 endif()
-set(CMAKE_PREFIX_PATH "D:/a/Test_CI/Qt/6.6.3/msvc2019_64")
 
-get_cmake_property(_variableNames VARIABLES)
-foreach (_variableName ${_variableNames})
-    message(STATUS "${_variableName}=${${_variableName}}")
-endforeach()
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Quick Multimedia Positioning Sensors WebSockets)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Quick Multimedia Positioning Sensors WebSockets)
 
-find_package(QT NAMES Qt6 COMPONENTS REQUIRED Core Quick Multimedia Positioning Sensors WebSockets)
 message(STATUS "Using Qt version: ${Qt6_VERSION}")
 message(STATUS "Using Qt version: ${Qt6Core_VERSION}")
 if (Qt6Core_VERSION VERSION_LESS 6.5.6)
