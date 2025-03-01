@@ -38,7 +38,11 @@ jobs:
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
-      run: cmake.exe -S C:/Users/thanh306/AppData/Local/actions-runner/_work/Test_CI/Test_CI -B C:/Users/thanh306/AppData/Local/actions-runner/_work/Test_CI/Test_CI/build --preset=qt-creator-config
+      run: cmake.exe -S C:/Users/thanh306/AppData/Local/actions-runner/_work/Test_CI/Test_CI -B C:/Users/thanh306/AppData/Local/actions-runner/_work/Test_CI/Test_CI/build 
+        -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_GENERATOR:STRING=Ninja -DArcGISRuntime_INSTALL_DIR:STRING=C:/Program Files/ArcGIS SDKs/Qt200.5.0
+        -DCMAKE_COLOR_DIAGNOSTICS:BOOL=1 -DCMAKE_C_COMPILER:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/cl.exe
+        -DCMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/Test_CI -DCMAKE_PREFIX_PATH:PATH=C:/Qt/6.6.3/msvc2019_64 -DVER_MAJ_MIN:STRING=200.5.0
+        -DWINDEPLOYQT_EXECUTABLE:FILEPATH=C:/Qt/6.6.3/msvc2019_64/bin/windeployqt.exe
 
     - name: Build
       # Build your program with the given configuration
