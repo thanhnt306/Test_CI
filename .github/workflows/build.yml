@@ -142,6 +142,7 @@ jobs:
         -DVER_MAJ_MIN="200.5.0"
 
     - name: Build with Qt environment
+      shell: cmd
       run: |
         call "C:\Qt\6.6.3\msvc2019_64\bin\qtenv2.bat"
         call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\VsDevCmd.bat" -arch=x64
