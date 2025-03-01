@@ -21,7 +21,7 @@
         "CMAKE_INSTALL_PREFIX": "C:/Program Files (x86)/Test_CI",
         "CMAKE_PREFIX_PATH": "C:/Qt/6.6.3/msvc2019_64",
 		"CMAKE_MAKE_PROGRAM": "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
-		"CMAKE_CXX_COMPILER": "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/cl.exe"
+		"CMAKE_CXX_COMPILER": "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/cl.exe",
         "QT_CREATOR_SKIP_PACKAGE_MANAGER_SETUP": "OFF",
         "QT_CREATOR_SOURCE_GROUPS": "ON",
         "QT_DIR": "C:/Qt/6.6.3/msvc2019_64/lib/cmake/Qt6",
