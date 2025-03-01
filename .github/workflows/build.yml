@@ -19,6 +19,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
+    - name: Set PowerShell Execution Policy
+      run: Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
+      shell: powershell
 
     # - name: Install Qt
     #   # Installs the Qt SDK
