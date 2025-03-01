@@ -64,7 +64,7 @@ jobs:
         echo "## v: Setting PATH variable"
         set PATH=%PATH%;C:\Users\thanh306\Documents\GAILL2.0\dependencies\googletest-distribution\lib
         set PATH=%PATH%;C:\Users\thanh306\Documents\GAILL2.0\dependencies\googletest-distribution\bin
-        ctest -C ${{env.BUILD_TYPE}}
+        ctest --rerun-failed --output-on-failure -C ${{env.BUILD_TYPE}}
 
     # - name: Test
     #   working-directory: ${{github.workspace}}/build/testing
