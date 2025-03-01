@@ -12,6 +12,8 @@
 #-------------------------------------------------
 cmake_minimum_required(VERSION 3.10)
 
+set(CMAKE_TRY_COMPILE_TARGET_TYPE "STATIC_LIBRARY")
+
 project(Test_CI LANGUAGES CXX)
 
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
