@@ -61,8 +61,9 @@ jobs:
         call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" x64
         cmake.exe --build C:/Users/thanh306/AppData/Local/actions-runner/_work/Test_CI/Test_CI/build --target all
         cd "C:\Users\thanh306\AppData\Local\actions-runner\_work\Test_CI\Test_CI\build\testing"
-        echo "C:\Users\thanh306\Documents\GAILL2.0\dependencies\googletest-distribution\lib" >> $GITHUB_PATH
-        echo "C:\Users\thanh306\Documents\GAILL2.0\dependencies\googletest-distribution\bin" >> $GITHUB_PATH
+        echo "## v: Setting PATH variable"
+        set PATH=%PATH%;C:\Users\thanh306\Documents\GAILL2.0\dependencies\googletest-distribution\lib
+        set PATH=%PATH%;C:\Users\thanh306\Documents\GAILL2.0\dependencies\googletest-distribution\bin
         ctest -C ${{env.BUILD_TYPE}}
 
     # - name: Test
