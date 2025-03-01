@@ -43,6 +43,7 @@ jobs:
         -DCMAKE_COLOR_DIAGNOSTICS=1 -DCMAKE_C_COMPILER="C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/cl.exe"
         -DCMAKE_INSTALL_PREFIX="C:/Program Files (x86)/Test_CI" -DCMAKE_PREFIX_PATH="C:/Qt/6.6.3/msvc2019_64" -DVER_MAJ_MIN="200.5.0"
         -DWINDEPLOYQT_EXECUTABLE="C:/Qt/6.6.3/msvc2019_64/bin/windeployqt.exe" -DCMAKE_MAKE_PROGRAM="C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe"
+        -DCMAKE_CXX_COMPILER="C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/cl.exe"
 
     - name: Build
       # Build your program with the given configuration
