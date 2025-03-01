@@ -150,9 +150,11 @@ jobs:
 
     - name: Build
       # Build your program with the given configuration
+      shell: cmd
       run: |
-        "C:\Qt\6.6.3\msvc2019_64\bin\qtenv2.bat"
-        "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" x64
+        call "C:\Qt\6.6.3\msvc2019_64\bin\qtenv2.bat"
+        call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\VsDevCmd.bat" -arch=x64
+        call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" x64
         cmake.exe --build C:/Users/thanh306/AppData/Local/actions-runner/_work/Test_CI/Test_CI/build --target all
 
     - name: Test
